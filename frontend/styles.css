@@ -139,6 +139,10 @@ footer {
   width: 50px;
   height: 50px;
   margin-bottom: 0px;
+  text-align: center;
+  padding-top: 12px;
+  color: #255e59;
+  font-family: cursive;
 }
 
 .ttt-row {
