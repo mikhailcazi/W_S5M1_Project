@@ -22,10 +22,14 @@ function eventsScript() {
   });
 
   const slythButton = document.querySelector("#slyth");
-  slythButton.addEventListener("click", () => {
-    let points = document.querySelector("#slyth-points");
-    points.textContent++;
-  });
+  slythButton.addEventListener(
+    "click",
+    () => {
+      let points = document.querySelector("#slyth-points");
+      points.textContent++;
+    },
+    true
+  );
 
   const huffleButton = document.querySelector("#huffle");
   huffleButton.addEventListener("click", () => {
