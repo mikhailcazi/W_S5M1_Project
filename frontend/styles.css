@@ -3,12 +3,12 @@
 /* ❗ DO NOT CHANGE THIS FILE */
 
 @font-face {
-  font-family: 'Titillium Web';
-  src: url('./TitilliumWeb.ttf');
+  font-family: "Titillium Web";
+  src: url("./TitilliumWeb.ttf");
 }
 
 body {
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "Titillium Web", sans-serif;
   border: 1rem solid #ff4b00;
 }
 
@@ -19,9 +19,7 @@ section {
   align-items: center;
 }
 
-h1,
-h2,
-h3 {
+div {
   margin-bottom: 1.2rem;
 }
 
@@ -92,4 +90,46 @@ section {
 
 footer {
   padding: 1rem;
+}
+
+.green-button {
+  border: 5px solid green;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #9fd29f;
+  color: #724000;
+}
+
+.red-button {
+  border: 5px solid red;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: rgb(234, 134, 134);
+  color: #724000;
+}
+
+.gryff-button {
+  border: none;
+  border-radius: 10px;
+  background-color: #770000;
+  color: #b37907;
+}
+
+.gryff-button:hover {
+  background-color: #b42525;
+  color: #db9305;
+  cursor: pointer;
+}
+
+.raven-button {
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(7, 37, 103);
+  color: rgb(221, 160, 37);
+}
+
+.raven-button:hover {
+  background-color: rgb(36, 71, 148);
+  color: rgb(240, 175, 45);
+  cursor: pointer;
 }

@@ -1,33 +1,76 @@
-function moduleProject1() {
-  const footer = document.querySelector('footer')
-  const currentYear = new Date().getFullYear()
-  footer.textContent = `© BLOOM INSTITUTE OF TECHNOLOGY ${currentYear}`
+function moduleProject1(blastOff) {
+  const footer = document.querySelector("footer");
+  const currentYear = new Date().getFullYear();
+  footer.textContent = `© BLOOM INSTITUTE OF TECHNOLOGY ${currentYear}`;
 
-  // 👇 WORK WORK BELOW THIS LINE 👇
+  // textContent
+  const myQuote = document.querySelector("#my-quote");
+  const listOfQuotes = [
+    "To be or not to be, that is the question",
+    "All the world's a stage, and all the men and women are simply actors",
+    "The world is changing",
+    "The only easy day was yesterday",
+    "Be yourself!",
+    "Javascript is cool!",
+  ];
+  myQuote.textContent = listOfQuotes[Math.floor(Math.random() * 5)];
 
-  // 👉 TASK 1 - Add a "widget" class name to widgets so CSS kicks in
-  //  ✨ add your code here
+  // setAttribute
+  const myImage = document.getElementById("shoe-image");
+  const imgSrcList = [
+    "images/Shoe - 1.jpg",
+    "images/Shoe - 2.jpg",
+    "images/Shoe - 3.jpg",
+  ];
+  let counter = 0;
+  setInterval(() => {
+    myImage.setAttribute("src", imgSrcList[counter]);
+    counter = (counter + 1) % 3;
+  }, 1000);
 
-  // 👉 TASK 2 - Build a "Quote of the Day" widget
-  //  ✨ add your code here
+  // style
 
-  // 👉 TASK 3 - Build a "Corporate Speak" widget
-  //  ✨ add your code here
+  const mySentence = document.getElementById("sentence");
+  mySentence.style.fontFamily = "Verdana, Geneva, Tahoma, sans-serif";
+  mySentence.style.color = "darkgray";
 
-  // 👉 TASK 4 - Build a "Countdown" widget
-  //  ✨ add your code here
+  // className
+  if (blastOff === true) {
+    const button = document.querySelector("#launch-button");
+    button.className = "green-button";
 
-  // 👉 TASK 5 - Build a "Friends" widget
-  //  ✨ add your code here
+    setTimeout(() => {
+      button.classList.remove("green-button");
+      button.classList.add("red-button");
+    }, 3000);
+  }
 
-  // 👉 TASK 6 - Make it so user can tab through the widgets
-  //  ✨ add your code here
+  // parentNode children
 
-  // 👆 WORK WORK ABOVE THIS LINE 👆
+  const myDiv = document.querySelector(".parent-child");
+
+  myDiv.children[0].style.color = "yellow";
+  myDiv.children[1].style.color = "green";
+  myDiv.children[2].style.color = "blue";
+
+  myDiv.children[0].parentNode.style;
+
+  // createElement
+  const headlines = document.querySelector(".headlines");
+
+  const headline1 = document.createElement("p");
+  headline1.textContent = "Tornado has struck!";
+  headlines.appendChild(headline1);
+
+  const headline2 = document.createElement("p");
+  headline2.textContent = "There's a new Pope!";
+  headlines.appendChild(headline2);
+
+  headline1.remove();
+
+  // append prepend insertAdjacent
 }
 
-// ❗ DO NOT WORK BELOW THIS LINE
-// ❗ DO NOT WORK BELOW THIS LINE
-// ❗ DO NOT WORK BELOW THIS LINE
-if (typeof module !== 'undefined' && module.exports) module.exports = { moduleProject1 }
-else moduleProject1()
+if (typeof module !== "undefined" && module.exports)
+  module.exports = { moduleProject1 };
+else moduleProject1();
