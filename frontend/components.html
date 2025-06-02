@@ -1,0 +1,37 @@
+<style>
+  .red-button {
+    background-color: red;
+  }
+
+  .green-button {
+    background-color: green;
+  }
+</style>
+
+<h1>Hey, this is your test!</h1>
+<div id="container"></div>
+
+<script>
+  function createButton() {
+    const button = document.createElement("button");
+    button.textContent = "Submit test!";
+    button.className = "green-button";
+    return button;
+  }
+
+  function appendButton(containerID) {
+    const container = document.getElementById(containerID);
+    const button1 = createButton();
+
+    container.appendChild(button1);
+
+    setTimeout(() => {
+      button1.textContent = "Time Up!";
+      button1.classList.remove("green-button");
+      button1.classList.add("red-button");
+      button1.disabled = true;
+    }, 5000);
+  }
+
+  appendButton("container");
+</script>

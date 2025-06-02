@@ -1,0 +1,58 @@
+<style>
+  .body {
+    border: 1px dashed black;
+    height: calc(100% - 100px);
+    background-color: #f9e9e9;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .tile {
+    border: 1px solid gray;
+    width: 100px;
+    height: 100px;
+  }
+
+  .movie-text {
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+  }
+</style>
+
+<h1>My Movie Database</h1>
+<div class="body" id="movie-board"></div>
+
+<script>
+  const movieList = [
+    { movieName: "Titanic", colour: "lightgray" },
+    { movieName: "Shrek 3", colour: "green" },
+    { movieName: "The Shawshank Redemption", colour: "white" },
+    { movieName: "The Dark Knight Rises ", colour: "yellow" },
+    { movieName: "Prometheus", colour: "red" },
+    { movieName: "Rocky", colour: "brown" },
+  ];
+
+  function createMovieTile(movieName, colour) {
+    const myDiv = document.createElement("div");
+    const myP = document.createElement("p");
+    myP.textContent = movieName;
+    myP.style.backgroundColor = colour;
+    myP.classList.add("movie-text");
+    myDiv.classList.add("tile");
+    myDiv.appendChild(myP);
+    return myDiv;
+  }
+
+  function appendTile(movieName, colour) {
+    const board = document.getElementById("movie-board");
+    const myTile = createMovieTile(movieName, colour);
+    board.appendChild(myTile);
+  }
+
+  movieList.forEach((movie) => {
+    appendTile(movie.movieName, movie.colour);
+  });
+</script>
