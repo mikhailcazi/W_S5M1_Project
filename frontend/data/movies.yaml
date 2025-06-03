@@ -1,0 +1,9 @@
+movies:
+- movie:
+    name: Titanic
+    director: Cameron
+    year: 1997
+- movie:
+    name: Avatar    
+    director: Cameron
+    year: 2014

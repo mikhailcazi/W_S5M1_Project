@@ -1,0 +1,8 @@
+[
+    { "movieName": "Titanic", "colour": "lightgray" },
+    { "movieName": "Shrek 3", "colour": "green" },
+    { "movieName": "The Shawshank Redemption", "colour": "white" },
+    { "movieName": "The Dark Knight Rises ", "colour": "yellow" },
+    { "movieName": "Prometheus", "colour": "red" },
+    { "movieName": "Rocky", "colour": "brown" }
+]

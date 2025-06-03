@@ -1,0 +1,3 @@
+movieName, director, year, genre, rating
+"Titanic", "Cameron", 1997, "Romance", 10
+"The Dark Knight", "XYZ", 2010, "Action", 9 
